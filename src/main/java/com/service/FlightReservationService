@@ -1,0 +1,7 @@
+package com.service;
+
+
+public interface FlightReservationService{
+
+   public String getBestFlights(String from, String to, String date);
+}

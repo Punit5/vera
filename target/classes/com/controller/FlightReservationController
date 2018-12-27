@@ -1,0 +1,21 @@
+package com.controller;
+
+@Controller
+public class FlightReservationController {
+ 
+    @Autowired
+    private FlightReservationService flightReservationService; 
+    
+    @GetMapping(value = "/urlPart1/{pathVariable1}", method = RequestMethod.GET)
+    public @ResponseBody /*ModelAndView*/ String get3BestFlights(
+        @PathVariable String pathVariable1,
+        httpServletRequest request, HttpServletResponse response,
+        @ModelAttribute("from") String from,
+        @ModelAttribute("to") String to,
+        @ModelAttribute("date") String date) {
+ 
+        String bestFlights = flightReservationService.getBestFlights(from, to, date);
+        
+        return bestFlights;
+    }
+}

@@ -1,0 +1,33 @@
+package com.service.impl;
+
+@Service
+public class FlightReservationService implements FlightReservationServiceImpl{
+
+	/**
+	 * 1. do http call to get the collection of flights in json format 
+	 *    call example : 
+	 *    http://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?origin=BOS&departure_date=2015-09-06--2015-09-26&duration=7--9&max_price=500&apikey=<your API key>
+	 * 2. Parse json and save as list of flights
+	 * 3. Sort flights by price
+	 * 4. Get 3 items from the top  
+	 * 5. Convert the selected items back to json
+	 * 6. return three items(best flights) in json
+	 */
+   public String getBestFlights(String from, String to, String date){
+        //1. call service to do the http call to get the collection of flights in json format
+        // example : http://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?origin=BOS&departure_date=2015-09-06--2015-09-26&duration=7--9&max_price=500&apikey=<your API key>
+        // ...        
+        String allFlights = null;
+        
+        //Parse flights json and save as collection of objects to sort
+        
+        //sort the flights by price
+        
+        //get list of flights 
+        
+        // convert the items into json
+        String bestFlights = null;
+        return bestFlights;
+   
+   }
+}
